@@ -9,7 +9,7 @@ def arguments():
     if (length - 1 >= 0):
         a = ":"
 
-    print("{} {}{}".format(length, arg_string, a))
+    print("{} {}{}".format(length, arg_string, a,))
 
     for index, arg in enumerate(argv):
         if (index > 0):
