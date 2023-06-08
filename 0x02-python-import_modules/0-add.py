@@ -5,6 +5,4 @@ b = 2
 
 if __name__ == "__main__":
     c = add(a,b)
-    print(str(a)+" + "+str(b)+" = "+str(c))
-
-
+    print("{} + {} = {}".format(a, b, c))
