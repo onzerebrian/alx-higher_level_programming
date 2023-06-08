@@ -13,4 +13,3 @@ def inf_add():
 
 if __name__ == "__main__":
     inf_add()
-
