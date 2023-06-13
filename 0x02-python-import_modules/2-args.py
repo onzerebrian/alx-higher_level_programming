@@ -2,18 +2,19 @@
 from sys import argv
 
 def arguments():
-    if len(argv) == 1:
-        print("{} {}".format(len(argv)-1, "arguments."))
-        return
+    arg_string = "arguments"
+    a = "."
+    length = len(argv) - 1
+    if (length == 1):
+        arg_string = "argument"
+    if (length - 1 >= 0):
+        a = ":"
 
-    if len(argv) == 2:
-        print("{} {}".format(len(argv) - 1, "argument:"))
-    elif len(argv) > 2:
-        print("{} {}".format(len(argv) - 1, "arguments:"))
+    print("{} {}{}".format(length, arg_string, a,))
 
-    no_of_argv = len(argv) - 1
-    i = 1
-    while i <= no_of_argv:
-        print("{}: {}".format(i,argv[i]))
-        i += 1
-arguments()
+    for index, arg in enumerate(argv):
+        if (index > 0):
+            print("{}: {}".format(index, arg))
+
+if __name__ == "__main__":
+    arguments()
