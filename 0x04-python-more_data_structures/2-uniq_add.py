@@ -10,6 +10,4 @@ def uniq_add(my_list=[]):
         if v == 0:
             _uniq.append(i)
     s_um = 0
-    for i in _uniq:
-        s_um += i
-    return s_um
+    return sum(_uniq)
