@@ -1,7 +1,12 @@
 #!/usr/bin/python3
-class MyList(list):
+"""
+This module contains one function: is_same_class
+"""
+
+
+def is_same_class(obj, a_class):
     """
-    class MyList that inherits from list
+    returns True if the object is exactly an instance of the specified class
+    otherwise False
     """
-    def print_sorted(self):
-        print(sorted(self))
+    return a_class is type(obj)
