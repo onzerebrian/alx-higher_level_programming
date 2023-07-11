@@ -2,13 +2,12 @@
 """
 This module contains one function
 """
+import json
 
 
-def append_write(filename="", text=""):
+def from_json_string(my_str):
     """
-    appends a string at the end of a text file (UTF8)
-    and returns the number of characters added
+    returns an object (Python data structure)
+    represented by a JSON string
     """
-    with open(filename, 'a') as f:
-        ap = f.write(text)
-    return ap
+    return json.loads(my_str)
