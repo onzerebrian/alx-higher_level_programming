@@ -2,13 +2,9 @@
 """
 This module contains one function
 """
+import json
 
 
-def write_file(filename="", text=""):
-    """
-    writes a string to a text file (UTF8)
-    and returns the number of characters written
-    """
-    with open(filename, 'w') as f:
-        wr = f.write(text)
-    return wr
+def to_json_string(my_obj):
+    """ returns the JSON representation of an object (string) """
+    return json.dumps(my_obj)
