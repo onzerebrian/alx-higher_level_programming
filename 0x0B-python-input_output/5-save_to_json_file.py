@@ -5,6 +5,8 @@ This module contains one function
 import json
 
 
-def to_json_string(my_obj):
-    """ returns the JSON representation of an object (string) """
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    """ writes an Object to a text file, using a JSON representation """
+    with open(filename, 'w') as f:
+        j = json.dumps(my_obj)
+        f.write(j)
