@@ -2,11 +2,13 @@
 """
 This module contains one function
 """
-import json
 
 
-def load_from_json_file(filename):
-    """ creates an Object from a “JSON file” """
-    with open(filename, 'r') as f:
-        data = f.read()
-        return json.loads(data)
+def class_to_json(obj):
+    """
+    returns the dictionary description
+    with simple data structure
+    (list, dictionary, string, integer and boolean)
+    for JSON serialization of an object
+    """
+    return obj.__dict__
