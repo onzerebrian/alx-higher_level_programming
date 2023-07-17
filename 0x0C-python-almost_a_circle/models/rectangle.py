@@ -1,26 +1,26 @@
 #!/usr/bin/python3
+'''
+    Class Rectangle
+'''
 from models.base import Base
 
 
-"""
-Rectangle module
-"""
-
-
 class Rectangle(Base):
-    """
-    Rectangle Class
-    """
+    '''
+        Defining the Rectangle class
+        Inherits from:
+            Base
+    '''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
-
-dth(self):
+    @property
+    def width(self):
         '''
             Returning private attribute
         '''
@@ -138,3 +138,4 @@ dth(self):
         '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
