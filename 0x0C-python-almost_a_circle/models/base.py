@@ -5,6 +5,7 @@ base module
 
 """
 
+
 class Base:
     """
     Base class
