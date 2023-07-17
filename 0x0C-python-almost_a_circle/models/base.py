@@ -1,28 +1,26 @@
 #!/usr/bin/python3
-
-"""
-base module
-
-"""
+'''
+    Creating the base class of all other classes for this project.
+'''
+import json
+import csv
 
 
 class Base:
-    """
-    Base class
-    """
+    '''
+        This class will manage the id attribute for all the classes.
+        Arguments:
+            @id: The id for a specific instance.
+    '''
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """
-        :param id:
-        """
-        if id is None:
-            Base.__nb_objects +=1
-            self.id = Base.__nb_objects
-
-        else:
+        if id is not None:
             self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -180,3 +178,4 @@ class Base:
             this is my method
         '''
         return ([])
+
